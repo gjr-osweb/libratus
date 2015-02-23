@@ -1,0 +1,21 @@
+/*Imagefit + Cycle 2*/
+#slideshow-page{overflow:hidden;}
+.slideshow{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+div.cycle-slideshow {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.slideshow,.slideshow .slide{max-width:100%;background:#111 url('../js/swipebox/img/loader.gif') no-repeat center center;}
+.slideshow .slide img {max-height:90vh;width:auto;max-width:100%;height:auto;}
+.slideshow h4{text-align:center;margin:0 auto;font-size:100%;color:#ccc;margin-bottom:10px;}
+.slideshow .slideshow_controls{display:block;position:absolute;bottom:0px;width:100%;margin:0 auto;text-align:center;color:#e1e1e1;z-index:1000;padding:15px 25px;background:#111;}
+.slideshow .slideshow_controls a{text-decoration:none;color:#fff;}
