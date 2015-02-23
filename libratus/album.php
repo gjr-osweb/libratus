@@ -22,7 +22,7 @@
 					<div class="gallery-thumbs-large">
 						<?php while (next_album()): ?>
 						<div>
-							<a href="<?php echo html_encode(getAlbumURL());?>" title="<?php printBareAlbumTitle();?>">
+							<a href="<?php echo html_encode(getAlbumURL());?>">
 								<?php printAlbumThumbImage(getBareAlbumTitle()); ?>
 							</a>
 							<div class="caption clearfix">
@@ -38,6 +38,7 @@
 								<?php if (getOption('libratus_date_albums')) { ?><div class="album-date"><?php printAlbumDate(); ?></div><?php } ?>
 								<h3 class="album-title"><?php printBareAlbumTitle();?></h3>
 							</div>
+							<i class="fa fa-angle-up mobile-click-details"></i>
 						</div>	
 						<?php endwhile; ?>
 					</div>
@@ -82,6 +83,7 @@
 								<?php } 
 								} ?>
 							</div>
+							<i class="fa fa-angle-up mobile-click-details"></i>
 						</div>
 						<?php endwhile; ?>
 					</div>

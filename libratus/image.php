@@ -139,6 +139,7 @@
 									<?php } 
 								} ?>
 							</div>
+							<i class="fa fa-angle-up mobile-click-details"></i>
 						</div>
 					<?php } ?>
 				</div>
@@ -146,11 +147,5 @@
 		</div>
 		<?php }
 		} ?>
-
-		
-		
-		
-					
-				
-				
+			
 <?php include ('inc-footer.php'); ?>

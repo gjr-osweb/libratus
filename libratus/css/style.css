@@ -244,6 +244,8 @@ border-bottom:10px solid #ccc;
 .caption.caption-image{
 	padding: 5px 5px 5px!important;
 }
+.mobile-click-details{position:absolute;bottom:5px;left:0;width:100%;text-align:center;color:#e1e1e1;}
+.caption-visible + .mobile-click-details{display:none;}
 
 .image-zoom:hover{color:#efefef;opacity:1;}
 .image-zoom{float:right;color:#fff;padding:0 4px 3px;opacity:0.5;}
@@ -409,6 +411,7 @@ ul.month li{font-weight:normal;line-height:1.6;}
 	ul.flags{float:right;margin:0;}
 }
 @media (min-width: 900px) {
+	.mobile-click-details{display:none;}
 	.archive-cols {-moz-column-count:5;-webkit-column-count:5;column-count:5;}
 	.gallery,.page,.comments-main{width:70%;}
 	.gallery-sidebar,.page-sidebar,.comments-sidebar{width:30%;}

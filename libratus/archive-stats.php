@@ -60,6 +60,7 @@
 								<?php if (getOption('libratus_date_albums')) { ?><div class="album-date"><?php echo zpFormattedDate(DATE_FORMAT, strtotime($album->getDateTime())); ?></div><?php } ?>
 								<h3 class="album-title"><?php echo html_encode($album->getTitle()) ;?></h3>
 							</div>
+							<i class="fa fa-angle-up mobile-click-details"></i>
 						</div>	
 						<?php } 
 						} else {
@@ -100,6 +101,7 @@
 								<div class="image-cr"><i class="fa fa-eye"></i><span> <?php echo $hitcounter; ?></span></div>
 								<?php } ?>
 							</div>
+							<i class="fa fa-angle-up mobile-click-details"></i>
 						</div>
 						<?php } 
 						} else {
