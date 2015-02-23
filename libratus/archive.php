@@ -19,12 +19,12 @@ if (isset($_GET['set'])) {
 			break;
 		case 'latestimagesbymtime':
 			$stat_type = 'images';
-			$stat_title = gettext('Latest Images by Date');
+			$stat_title = gettext('Latest Images by mTime');
 			$stat_option = 'latest-mtime';
 			break;
 		case 'latestimagesbypdate':
 			$stat_type = 'images';
-			$stat_title = gettext('Latest Images by Date');
+			$stat_title = gettext('Latest Images by Publish Date');
 			$stat_option = 'latest-publishdate';
 			break;
 		case 'mostratedimages':
@@ -55,12 +55,12 @@ if (isset($_GET['set'])) {
 			break;
 		case 'latestalbumsbymtime':
 			$stat_type = 'albums';
-			$stat_title = gettext('Latest Albums by Date');
+			$stat_title = gettext('Latest Albums by mTime');
 			$stat_option = 'latest-mtime';
 			break;
 		case 'latestalbumsbypdate':
 			$stat_type = 'albums';
-			$stat_title = gettext('Latest Albums by Date');
+			$stat_title = gettext('Latest Albums by Publish Date');
 			$stat_option = 'latest-publishdate';
 			break;
 		case 'mostratedalbums':

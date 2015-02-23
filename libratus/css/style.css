@@ -342,6 +342,8 @@ label[for="private"],label[for="anon"]{display:inline-block;}
 .stats-menu a{text-decoration:none;padding:3px 0;}
 .stats-menu div.active,.stats-menu div.active a{color:#000;}
 
+.stats-more{color:#fff;}
+
 #bottom-links{background:#ddd;}
 ul.flags{margin:5px 0 10px;}
 #bottom-modules{background:#222;}

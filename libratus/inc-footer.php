@@ -66,7 +66,10 @@
 				<?php if (getOption('libratus_stats_images_popular_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Popular Images'); ?></h5>
+						<h5>
+							<?php echo gettext('Popular Images'); ?>
+							<?php if (getOption('libratus_stats_images_popular')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=popularimages'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getImageStatistic(getOption('libratus_bottom_stats_number'),'popular', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { ?>
@@ -81,7 +84,10 @@
 				<?php if (getOption('libratus_stats_images_latestbyid_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Latest Images'); ?></h5>
+						<h5>
+							<?php echo gettext('Latest Images (ID)'); ?>
+							<?php if (getOption('libratus_stats_images_latestbyid')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=latestimagesbyid'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getImageStatistic(getOption('libratus_bottom_stats_number'),'latestbyid', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { ?>
@@ -96,7 +102,10 @@
 				<?php if (getOption('libratus_stats_images_latestbymtime_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Latest Images'); ?></h5>
+						<h5>
+							<?php echo gettext('Latest Images (mTime)'); ?>
+							<?php if (getOption('libratus_stats_images_latestbymtime')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=latestimagesbymtime'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getImageStatistic(getOption('libratus_bottom_stats_number'),'latestbymtime', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { ?>
@@ -111,8 +120,29 @@
 				<?php if (getOption('libratus_stats_images_latestbydate_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Latest Images'); ?></h5>
+						<h5>
+							<?php echo gettext('Latest Images (Date)'); ?>
+							<?php if (getOption('libratus_stats_images_latestbydate')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=latestimagesbydate'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getImageStatistic(getOption('libratus_bottom_stats_number'),'latestbydate', '', false, 1); ?>
+						<div class="gallery-thumbs">
+						<?php foreach ($items as $item) { ?>
+							<a href="<?php echo html_encode($item->getLink()); ?>" title="<?php echo html_encode($item->getTitle()); ?>">
+								<?php echo '<img src="' . html_encode(pathurlencode($item->getCustomImage(null,140,140,140,140,null,null,true))) . '" alt="' . html_encode($item->getTitle()) . "\" />\n<br />"; ?>
+							</a>
+						<?php } ?>
+						</div>
+					</div>
+				<?php $c++; } ?>
+				
+				<?php if (getOption('libratus_stats_images_latestbypdate_bottom')) {
+					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
+					<div class="<?php echo $class; ?>">
+						<h5>
+							<?php echo gettext('Latest Images (Pub. Date)'); ?>
+							<?php if (getOption('libratus_stats_images_latestbypdate')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=latestimagesbypdate'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
+						<?php $items = getImageStatistic(getOption('libratus_bottom_stats_number'),'latestbypdate', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { ?>
 							<a href="<?php echo html_encode($item->getLink()); ?>" title="<?php echo html_encode($item->getTitle()); ?>">
@@ -126,7 +156,10 @@
 				<?php if (getOption('libratus_stats_images_mostrated_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Most Rated Images'); ?></h5>
+						<h5>
+							<?php echo gettext('Most Rated Images'); ?>
+							<?php if (getOption('libratus_stats_images_mostrated')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=mostratedimages'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getImageStatistic(getOption('libratus_bottom_stats_number'),'mostrated', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { ?>
@@ -141,7 +174,10 @@
 				<?php if (getOption('libratus_stats_images_toprated_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Top Rated Images'); ?></h5>
+						<h5>
+							<?php echo gettext('Top Rated Images'); ?>
+							<?php if (getOption('libratus_stats_images_toprated')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=topratedimages'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getImageStatistic(getOption('libratus_bottom_stats_number'),'toprated', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { ?>
@@ -158,7 +194,10 @@
 				<?php if (getOption('libratus_stats_albums_popular_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Popular Albums'); ?></h5>
+						<h5>
+							<?php echo gettext('Popular Albums'); ?>
+							<?php if (getOption('libratus_stats_albums_popular')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=popularalbums'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getAlbumStatistic(getOption('libratus_bottom_stats_number'),'popular', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { $image = $item->getAlbumThumbImage(); ?>
@@ -173,7 +212,10 @@
 				<?php if (getOption('libratus_stats_albums_latestbyid_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Latest Albums'); ?></h5>
+						<h5>
+							<?php echo gettext('Latest Albums (ID)'); ?>
+							<?php if (getOption('libratus_stats_albums_latestbyid')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=latestalbumsbyid'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getAlbumStatistic(getOption('libratus_bottom_stats_number'),'latestbyid', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { $image = $item->getAlbumThumbImage(); ?>
@@ -188,7 +230,10 @@
 				<?php if (getOption('libratus_stats_albums_latestbymtime_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Latest Albums'); ?></h5>
+						<h5>
+							<?php echo gettext('Latest Albums (mTime)'); ?>
+							<?php if (getOption('libratus_stats_albums_latestbymtime')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=latestalbumsbymtime'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getAlbumStatistic(getOption('libratus_bottom_stats_number'),'latestbymtime', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { $image = $item->getAlbumThumbImage(); ?>
@@ -203,7 +248,10 @@
 				<?php if (getOption('libratus_stats_albums_latestbydate_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Latest Albums'); ?></h5>
+						<h5>
+							<?php echo gettext('Latest Albums (Date)'); ?>
+							<?php if (getOption('libratus_stats_albums_latestbydate')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=latestalbumsbydate'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getAlbumStatistic(getOption('libratus_bottom_stats_number'),'latestbydate', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { $image = $item->getAlbumThumbImage(); ?>
@@ -218,7 +266,10 @@
 				<?php if (getOption('libratus_stats_albums_mostrated_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Most Rated Albums'); ?></h5>
+						<h5>
+							<?php echo gettext('Most Rated Albums'); ?>
+							<?php if (getOption('libratus_stats_albums_mostrated')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=mostratedalbums'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getAlbumStatistic(getOption('libratus_bottom_stats_number'),'mostrated', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { $image = $item->getAlbumThumbImage(); ?>
@@ -233,7 +284,10 @@
 				<?php if (getOption('libratus_stats_albums_toprated_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Top Rated Albums'); ?></h5>
+						<h5>
+							<?php echo gettext('Top Rated Albums'); ?>
+							<?php if (getOption('libratus_stats_albums_toprated')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=topratedalbums'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getAlbumStatistic(getOption('libratus_bottom_stats_number'),'toprated', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { $image = $item->getAlbumThumbImage(); ?>
@@ -248,7 +302,10 @@
 				<?php if (getOption('libratus_stats_albums_latestupdated_bottom')) {
 					if ($c==getOption('libratus_bottom_stats_perrow')) { echo '</div><div class="row">'; $c=0; } ?>
 					<div class="<?php echo $class; ?>">
-						<h5><?php echo gettext('Latest Updated Albums'); ?></h5>
+						<h5>
+							<?php echo gettext('Latest Updated Albums'); ?>
+							<?php if (getOption('libratus_stats_albums_latestupdated')) { ?>&nbsp;<a class="stats-more" title="<?php echo gettext('More'); ?>" href="<?php echo getCustomPageURL('archive').'?set=latestupdatedalbums'; ?>"><i class="fa fa-caret-right"></i></a><?php } ?>
+						</h5>
 						<?php $items = getAlbumStatistic(getOption('libratus_bottom_stats_number'),'latestupdated', '', false, 1); ?>
 						<div class="gallery-thumbs">
 						<?php foreach ($items as $item) { $image = $item->getAlbumThumbImage(); ?>
