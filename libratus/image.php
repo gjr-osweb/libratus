@@ -57,18 +57,18 @@
 					<?php if (getOption('libratus_social')) include ('inc-socialshare.php'); ?>
 					
 					<?php if ((function_exists('printGoogleMap')) || (function_exists('printOpenStreetMap'))) {
-						if (function_exists('printGoogleMap')) {
-							if (getGeoCoord($_zp_current_image)) {
-								setOption('gmap_width',null,false); // wipe out any px settings for plugin, flex set in css
-								setOption('gmap_height',300,false);
-								printGoogleMap(gettext('Show Google Map'),null,'show'); 
-							}
-						} elseif (function_exists('printOpenStreetMap')) {
+						if (function_exists('printOpenStreetMap')) {
 							$map = new zpOpenStreetMap();
 							if ($map->getGeoData()) {
 								setOption('osmap_width','100%',false); // wipe out any px settings for plugin, flex set in css
 								setOption('osmap_height','300px',false);
 								printOpenStreetMap();
+							}
+						} elseif (function_exists('printGoogleMap')) {
+							if (getGeoCoord($_zp_current_image)) {
+								setOption('gmap_width',null,false); // wipe out any px settings for plugin, flex set in css
+								setOption('gmap_height',300,false);
+								printGoogleMap(gettext('Show Google Map'),null,'show'); 
 							}
 						}
 					} ?>

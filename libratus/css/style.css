@@ -413,11 +413,14 @@ ul.month li{font-weight:normal;line-height:1.6;}
 	ul.flags{float:right;margin:0;}
 }
 @media (min-width: 900px) {
-	.mobile-click-details{display:none;}
 	.archive-cols {-moz-column-count:5;-webkit-column-count:5;column-count:5;}
 	.gallery,.page,.comments-main{width:70%;}
 	.gallery-sidebar,.page-sidebar,.comments-sidebar{width:30%;}
 	.image-zoom-mobile{display:none;}
+	
+}
+@media (min-width: 1200px) {
+	.mobile-click-details{display:none;}
 }
 
 /* ---- Print Styles ---- */
