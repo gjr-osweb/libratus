@@ -2,6 +2,8 @@ html,body,#container,#ss-wrap{height:100%;}
 *,*:after,*:before{-moz-box-sizing:border-box;box-sizing:border-box;}
 .scale{max-width:100%;height:auto;max-height:100%;}
 
+.textasnewflag i{color:#e1e1e1;}
+.textasnewflag i.red{color:red;}
 
 #zp__admin_module {
 	position:relative;

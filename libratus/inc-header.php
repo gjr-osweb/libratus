@@ -6,6 +6,12 @@ $galleryactive = ($_zp_gallery_page == 'index.php' || $_zp_gallery_page == 'albu
 require_once (SERVERPATH . '/' . ZENFOLDER . '/' . PLUGIN_FOLDER . '/print_album_menu.php');
 require_once (SERVERPATH . '/' . ZENFOLDER . '/' . PLUGIN_FOLDER . '/image_album_statistics.php');
 
+setOption('flag_thumbnail_use_text',true,false);
+setOption('flag_thumbnail_new_text','<i title="'.gettext("New Image").'" class="fa fa-flag fa-fw"></i>',false);
+setOption('flag_thumbnail_geodata_text','<i title="'.gettext("Geotagged").'" class="fa fa-map-marker fa-fw"></i>',false);
+setOption('flag_thumbnail_locked_text','<i title="'.gettext("Protected").'" class="fa fa-lock fa-fw"></i>',false);
+setOption('flag_thumbnail_unpublished_text','<span title="'.gettext("Unpublished").'" class="fa-stack"><i class="fa fa-circle fa-stack-1x fa-fw"></i><i class="fa fa-exclamation-circle fa-stack-1x fa-fw red"></i></span>',false);
+
 $quickmenu = '<div id="quickmenu">';
 $quickmenu .= '<a id="nav-icon" class="quick-menu menu-btn"><i class="fa fa-bars fa-lg"></i></a>';
 $quickmenu .= '<a id="search-icon" class="quick-menu" href="'.getCustomPageURL('archive').'" title="'.gettext('Archive/Search').'"><i class="fa fa-search fa-lg"></i></a>';

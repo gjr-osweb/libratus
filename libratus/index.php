@@ -61,7 +61,7 @@
 						<?php while (next_album()): ?>
 						<div>
 							<a href="<?php echo html_encode(getAlbumURL());?>">
-								<?php printAlbumThumbImage(getBareAlbumTitle()); ?>
+								<?php printAlbumThumbImage(getBareAlbumTitle(),'check-flagthumb'); ?>
 							</a>
 							<div class="caption clearfix">
 								<div class="album-details">

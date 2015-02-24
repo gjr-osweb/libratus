@@ -9,7 +9,9 @@ $(document).ready(function(){
 	$('#commentform input[type="submit"]').addClass('button-primary');
 	$('#search_submit').removeClass('button');
 	
-	
+	var iw = $( "img.check-flagthumb" );
+	if ( iw.parent().is( "span" ) ) { iw.unwrap(); }
+
 	/*
 	$('.gallery-thumbs').each(function (i, el) {
 		$(el).justifiedGallery({rel: 'gal' + i, rowHeight: 120, margins: 20, cssAnimation : true,}).on('jg.complete', function () {

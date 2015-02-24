@@ -55,7 +55,7 @@ if ($total == 0) {
 						<?php while (next_album()): ?>
 						<div>
 							<a href="<?php echo html_encode(getAlbumURL());?>" title="<?php printBareAlbumTitle();?>">
-								<?php printAlbumThumbImage(getBareAlbumTitle()); ?>
+								<?php printAlbumThumbImage(getBareAlbumTitle(),'check-flagthumb'); ?>
 							</a>
 							<div class="caption clearfix">
 								<div class="album-details">
@@ -80,7 +80,7 @@ if ($total == 0) {
 						<?php while (next_image()): ?>
 						<div>
 							<a href="<?php echo html_encode(getImageURL()); ?>" title="<?php echo getBareImageTitle(); ?>">
-								<?php printImageThumb(null,'scale'); ?>
+								<?php printImageThumb(null,'check-flagthumb scale'); ?>
 							</a>
 							<div class="caption caption-image">
 								<?php if (isImagePhoto()) { ?>
