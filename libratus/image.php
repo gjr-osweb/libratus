@@ -114,8 +114,9 @@
 			<div class="inner pad">
 				<div class="bold-header"><?php echo gettext('Related Images').' ('.$resultcount.')'; ?></div>
 				<div class="gallery-thumbs">
-					<?php $count = 0;
-					foreach ($result as $item) { $count++;
+					<?php $count = 0; if (is_numeric(getOption('libratus_related_maxnumber'))) { $number = getOption('libratus_related_maxnumber'); } else { $number = 10; } 
+					foreach ($result as $item) { 
+						if ($count == $number) break;
 						$alb = newAlbum($item['album']);
 						$obj = newImage($alb, $item['name']);
 						$url = $obj->getLink();
@@ -141,7 +142,7 @@
 							</div>
 							<i class="fa fa-angle-up mobile-click-details"></i>
 						</div>
-					<?php } ?>
+					<?php $count++; } ?>
 				</div>
 			</div>
 		</div>

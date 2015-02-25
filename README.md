@@ -4,6 +4,12 @@ Libratus is a [Zenphoto](http://zenphoto.org) theme that is fully responsive whi
 ![Index Page](https://github.com/gjr-osweb/libratus/blob/master/screenshots/index.png "Gallery Index")
 More screenshots viewable in the repo.
 
+__To Install__
+Place the "Libratus" folder that is inside the package ONLY (not the entire package), inside the themes folder of your Zenphoto installation (via FTP).  Navigate to the theme tab on your backend installation and enable the theme, set/view theme options.
+
+__Custom Logo__
+By default, Libratus uses the text title of your Gallery on the home page and slide out menu.  To use a custom logo place the png image file (logo.png) directly in your upload folder of your installation.  The theme will detect the file and use it as your logo.
+
 ### Theme Options
 __Max Width of Site__
 Set the max-width of site in pixels. Site is fluid but will not expand beyond this width.

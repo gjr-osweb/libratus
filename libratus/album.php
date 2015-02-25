@@ -180,8 +180,9 @@
 			<div class="inner pad">
 				<div class="bold-header"><?php echo gettext('Related Albums').' ('.$resultcount.')'; ?></div>
 				<div class="gallery-thumbs-large">
-					<?php $count = 0;
-					foreach ($result as $item) { $count++;
+					<?php $count = 0; if (is_numeric(getOption('libratus_related_maxnumber'))) { $number = getOption('libratus_related_maxnumber'); } else { $number = 10; } 
+					foreach ($result as $item) {
+						if ($count == $number) break;
 						$obj = newAlbum($item['name']);
 						$url = $obj->getLink();
 						$thumburl = $obj->getThumb(); ?>
@@ -201,7 +202,7 @@
 								<h3 class="album-title"><?php echo html_encode($obj->getTitle()); ?></h3>
 							</div>
 						</a>
-					<?php } ?>
+					<?php  $count++; } ?>
 				</div>
 			</div>
 		</div>

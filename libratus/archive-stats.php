@@ -17,13 +17,15 @@
 				</div>
 			</div>
 		</div>
-			
+		
+		<?php if (is_numeric(getOption('libratus_stats_number'))) { $number = getOption('libratus_stats_number'); } else { $number = 30; } ?>
+		
 		<div id="main" class="wrap clearfix">
 			<div class="inner">
 				<div class="gallery pad">
 				
 					<?php if ($stat_type == 'albums') { 
-					$albums = getAlbumStatistic(25,$stat_option,'',1); ?>
+					$albums = getAlbumStatistic($number,$stat_option,'',1); ?>
 
 					<div class="gallery-thumbs-large">
 						<?php if ($albums) {

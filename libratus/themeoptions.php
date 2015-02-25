@@ -42,11 +42,13 @@ class ThemeOptions {
 		setThemeOptionDefault('libratus_stats_albums_mostrated', true); 
 		setThemeOptionDefault('libratus_stats_albums_toprated', true); 
 		setThemeOptionDefault('libratus_stats_albums_latestupdated', true);
+		setThemeOptionDefault('libratus_stats_number', 30);
 		setThemeOptionDefault('libratus_bottom_stats_number', 5);
 		setThemeOptionDefault('libratus_bottom_stats_perrow', 3);
 		setThemeOptionDefault('libratus_stats_images_popular_bottom', true);
 		setThemeOptionDefault('libratus_stats_images_latestbyid_bottom', true);
 		setThemeOptionDefault('libratus_stats_images_toprated_bottom', true);
+		setThemeOptionDefault('libratus_related_maxnumber', 10);
 		if (class_exists('cacheManager')) {
 			$me = basename(dirname(__FILE__));
 			cacheManager::deleteThemeCacheSizes($me);
@@ -167,18 +169,26 @@ class ThemeOptions {
 				'order' => 12,
 				'checkboxes' => $stats_checkboxes,
 				'desc' => gettext('Select which statistical pages to show in the archive side menu, if any.')),
+			gettext('Statistical Pages Number') => array('key' => 'libratus_stats_number', 'type' => OPTION_TYPE_TEXTBOX, 
+				'order'=>13, 
+				'multilingual' => 0,
+				'desc' => gettext('Enter the number of images or albums to show for each statistic on the archive pages (default 30).')),
 			gettext('Bottom Stats Items per Row') => array('key' => 'libratus_bottom_stats_perrow', 'type' => OPTION_TYPE_RADIO, 
-				'order' => 13,
+				'order' => 14,
 				'buttons' => array(gettext('Disable')=>0, gettext('1')=>1, gettext('2')=>2, gettext('3')=>3, gettext('4')=>4),
 				'desc' => gettext("Select how many items per row for the bottom stats, if any.")),
 			gettext('Bottom Stats') => array('key' => 'libratus_bottom_stats', 'type' => OPTION_TYPE_CHECKBOX_ARRAY,
-				'order' => 14,
+				'order' => 15,
 				'checkboxes' => $bottom_stats_checkboxes,
 				'desc' => gettext('Select what to show in the bottom row, if not disabled above. Recommended to choose multiples of the option items per row.')),
 			gettext('Number of Images in Bottom Stats') => array('key' => 'libratus_bottom_stats_number', 'type' => OPTION_TYPE_TEXTBOX, 
-				'order'=>15, 
+				'order'=>16, 
 				'multilingual' => 0,
-				'desc' => gettext('Choose number of images or albums to show for each stat.'))
+				'desc' => gettext('Enter the number of images or albums to show for each selected statistic in the bottom footer.')),
+			gettext('Related Max Number') => array('key' => 'libratus_related_maxnumber', 'type' => OPTION_TYPE_TEXTBOX, 
+				'order'=>17, 
+				'multilingual' => 0,
+				'desc' => gettext('Enter the MAX number of related albums and images to show on their respective pages (if plugin is enabled).'))
 		);
 	}
 } ?>
