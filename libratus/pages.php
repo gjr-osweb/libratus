@@ -32,9 +32,15 @@ include('inc-header.php'); ?>
 
 				<div class="page-sidebar pad">
 					<?php $hasFeaturedImage = false; if (function_exists('printSizedFeaturedImage')) $hasFeaturedImage = getFeaturedImage();
-					if ($hasFeaturedImage) { ?>
+					if ($hasFeaturedImage) { 
+						if (is_numeric(getOption('libratus_maxwidth'))) {
+								$size = .70 * getOption('libratus_maxwidth');
+							} else {
+								$size = 920;
+							}
+					?>
 					<div class="featured-image full-article">
-						<?php printSizedFeaturedImage(null,null,getOption('image_size'),null,null,null,null,null,null,'scale',null,true,null); ?>
+						<?php printSizedFeaturedImage(null,null,$size,null,null,null,null,null,null,'scale',null,true,null); ?>
 					</div>
 					<hr />
 					<?php } ?>

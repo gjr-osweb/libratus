@@ -112,7 +112,7 @@
 		if ($resultcount != 0) { ?>
 		<div id="related-items-gallery" class="wrap clearfix">
 			<div class="inner pad">
-				<div class="bold-header"><?php echo gettext('Related Images').' ('.$resultcount.')'; ?></div>
+				<div class="bold-header"><?php echo gettext('Related Images'); ?></div>
 				<div class="gallery-thumbs">
 					<?php $count = 0; if (is_numeric(getOption('libratus_related_maxnumber'))) { $number = getOption('libratus_related_maxnumber'); } else { $number = 10; } 
 					foreach ($result as $item) { 
