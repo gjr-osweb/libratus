@@ -19,7 +19,7 @@
 		<div id="main" class="wrap clearfix">
 			<div class="inner">
 				<div class="page pad">
-					<?php printPasswordForm($hint, $show); ?>
+					<?php printPasswordForm('', true, false); ?>
 					<?php if (!zp_loggedin() && function_exists('printRegistrationForm') && $_zp_gallery->isUnprotectedPage('register')) {
 					printCustomPageURL(gettext('Register for this site'), 'register', '', '<br />');
 					} ?>
