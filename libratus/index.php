@@ -4,7 +4,7 @@
 		<div id="ss-wrap">
 			<ul id="cbp-bislideshow" class="cbp-bislideshow">
 				<?php 
-				$images = getImageStatistic(5,getOption('libratus_ss_type'),'',true);
+				$images = getImageStatistic(5,getOption('libratus_ss_type'),getOption('libratus_ss_album'),true);
 				foreach ($images as $image) {
 				echo '<li>';
 				$html = '<img src="' . html_encode(pathurlencode($image->getCustomImage(1200,null,null,null,null,null,null,true))) . '" alt="' . html_encode($image->getTitle()) . '" />';
