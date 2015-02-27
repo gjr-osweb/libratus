@@ -19,10 +19,16 @@
 		<div id="main" class="wrap clearfix">
 			<div class="inner">
 				<div class="page pad">
-					<?php printPasswordForm('', true, false); ?>
-					<?php if (!zp_loggedin() && function_exists('printRegistrationForm') && $_zp_gallery->isUnprotectedPage('register')) {
+					<?php 
+					if (!zp_loggedin()) {
+					printPasswordForm('', true, false); ?>
+					<?php if (function_exists('printRegistrationForm') && $_zp_gallery->isUnprotectedPage('register')) {
 					printCustomPageURL(gettext('Register for this site'), 'register', '', '<br />');
-					} ?>
+					} 
+					} else { ?>
+					<h4><?php echo gettext('You are logged in'); ?></h4>
+					<p><a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo gettext('Goto Homepage'); ?>"><?php echo gettext('Goto Homepage').' &rarr;'; ?></a></p>
+					<?php } ?>
 				</div>
 
 				<div class="page-sidebar pad">
