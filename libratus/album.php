@@ -95,13 +95,13 @@
 					<?php if ($_zp_gallery_page == 'album.php') { ?>
 					<div class="single-nav">
 						<?php if ($prev = getPrevAlbum()) { ?>
-						<a class="button prev-link" href="<?php echo html_encode(getPrevAlbumURL()); ?>" title="<?php echo gettext('Previous Album').': '.html_encode($prev->getTitle()); ?>"><i class="fa fa-caret-left"></i> <?php echo gettext("Prev Album"); ?></a>
+						<a class="button prev-link" href="<?php echo html_encode(getPrevAlbumURL()); ?>" title="<?php echo gettext('Prev album').': '.html_encode($prev->getTitle()); ?>"><i class="fa fa-caret-left"></i> <?php echo gettext("Prev album"); ?></a>
 						<?php } else { ?>
 						<span class="button prev-link"><i class="fa fa-caret-left"></i> <?php echo gettext("Prev Album"); ?></span>
 						<?php } ?>
 						
 						<?php if ($next = getNextAlbum()) { ?>
-						<a class="button next-link" href="<?php echo html_encode(getNextAlbumURL()); ?>" title="<?php echo gettext('Next Album').': '.html_encode($next->getTitle()); ?>"><?php echo gettext("Next Album"); ?> <i class="fa fa-caret-right"></i></a>
+						<a class="button next-link" href="<?php echo html_encode(getNextAlbumURL()); ?>" title="<?php echo gettext('Next album').': '.html_encode($next->getTitle()); ?>"><?php echo gettext("Next album"); ?> <i class="fa fa-caret-right"></i></a>
 						<?php } else { ?>
 						<span class="button next-link"><?php echo gettext("Next Album"); ?> <i class="fa fa-caret-right"></i></span>
 						<?php } ?>
