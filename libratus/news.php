@@ -115,12 +115,19 @@ include('inc-header.php'); ?>
 					<?php } 
 					} ?>
 					<?php if (function_exists('printRelatedItems')) { ?>
-					<hr />
+					<?php if (getRelatedItems()) { ?><hr />
 					<?php printRelatedItems(5,'news',null,null,true); ?>
 					<?php } ?>
+					<?php } ?>
+					<?php if ($_zp_zenpage->getAllCategories()) { ?>
+					<hr /><h5><?php echo gettext('News Categories'); ?></h5>
+					<?php printAllNewsCategories(gettext('All News'),true,'','menu-active',true,'submenu','menu-active'); ?>
+					<?php } ?>
 					<?php } else { ?>
+					<?php if ($_zp_zenpage->getAllCategories()) { ?>
 					<h5><?php echo gettext('News Categories'); ?></h5>
 					<?php printAllNewsCategories(gettext('All News'),true,'','menu-active',true,'submenu','menu-active'); ?>
+					<?php } ?>
 					<?php } ?>
 				</div>
 			</div>

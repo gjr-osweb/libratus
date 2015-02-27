@@ -331,6 +331,8 @@ label[for="private"],label[for="anon"]{display:inline-block;}
 .latestnews-cats,#latestnews .readmorelink{display:none;}
 .latestnews-date{font-size:80%;font-style:italic;}
 
+.page-sidebar .menu-active{text-decoration:none;color:#888;}
+
 .featured-image.news-reel{float:left;margin:5px 20px 15px 0;}
 .featured-image.full-article{margin:0 auto 25px auto;background:#eee;}
 .featured-image.full-article img{margin:0 auto;display:block;}
