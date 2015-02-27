@@ -104,8 +104,9 @@ if (is_object($randomImage) && $randomImage->exists) {
 				<a href="<?php echo html_encode(getGalleryIndexURL()); ?>" title="<?php echo $hometext; ?>"><?php echo $hometext; ?></a>
 			</li>
 			<?php if (($zenpage) && (getNumNews(true) > 0) && (ZP_NEWS_ENABLED)) { ?>
-			<li <?php if ($_zp_gallery_page == "news.php") { ?>class="active" <?php } ?>>
-				<a href="<?php echo getNewsIndexURL(); ?>"><?php echo gettext('News'); ?></a>
+			<li>
+				<a <?php if (($_zp_gallery_page == "news.php") && (is_null($_zp_current_category))) { ?>class="active" <?php } ?>href="<?php echo getNewsIndexURL(); ?>"><?php echo gettext('News'); ?></a>
+				<?php printAllNewsCategories('',false,'','active open',true,'submenu','active open','list',true,null); ?>
 			</li>
 			<?php } ?>
 			<?php if (($zenpage) && (ZP_PAGES_ENABLED)) printPageMenu('list','','active open','submenu','active open','',true,false); ?>
