@@ -113,9 +113,7 @@ class ThemeOptions {
 		$albums = getNestedAlbumList(null, 9999999, false);
 		foreach($albums as $album) {
 			$albumobj = newAlbum($album['name'], true);
-			if ($albumobj->getShow()) {
-				$albumlist[$album['name']] = $album['name'];
-			}
+			$albumlist[$album['name']] = $album['name'];
 		}
 		return array(	
 			gettext('Max Width of Site') => array('key' => 'libratus_maxwidth', 'type' => OPTION_TYPE_TEXTBOX, 
@@ -137,7 +135,7 @@ class ThemeOptions {
 			gettext('Home Slideshow from Album') => array('key' => 'libratus_ss_album', 'type' => OPTION_TYPE_SELECTOR,
 				'order' => 3, 
 				'selections' => $albumlist, 
-				'desc' => gettext('Optionally select a specific album the Home Slideshow pulls from. Default is "Entire Gallery", which pulls from the entire gallery. Only published albums are shown here. Be careful with this option to ensure there are images that meet the statistic and they are viewable (rights), otherwise no images will show.')),
+				'desc' => gettext('Optionally select a specific album the Home Slideshow pulls from. Default is "Entire Gallery", which pulls from the entire gallery. Be careful with this option to ensure there are images that meet the statistic and they are viewable (rights), otherwise no images will show.')),
 			gettext('Slideshow Interval') => array('key' => 'libratus_ss_interval', 'type' => OPTION_TYPE_TEXTBOX, 
 				'order'=>4, 
 				'multilingual' => 0,
