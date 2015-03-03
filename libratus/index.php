@@ -56,7 +56,7 @@
 
 		<div id="main" class="wrap clearfix">
 			<div class="inner">
-				<div class="gallery pad">
+				<div class="gallery pad<?php if (getOption('libratus_index_fullwidth')) echo ' fullwidth'; ?>">
 					<div class="gallery-thumbs-large">
 						<?php while (next_album()): ?>
 						<div>
@@ -83,11 +83,13 @@
 					<?php if (hasNextPage() || hasPrevPage()) { ?><div class="pad"><hr /><?php printPageListWithNav('« '.gettext('prev'),gettext('next').' »',false,true,'pagination'); ?></div><?php } ?>
 				</div>
 				
+				<?php if (!getOption('libratus_index_fullwidth')) { ?>
 				<div class="gallery-sidebar pad">
 					<?php printSearchForm('','search',$_zp_themeroot.'/images/magnifying_glass_16x16.png',gettext('Search gallery'),$_zp_themeroot.'/images/list_12x11.png'); ?>	
 					<hr />
 					<?php include ('inc-archive-stats-menu.php'); ?> 	
 				</div>
+				<?php } ?>
 			</div>	
 		</div>
 		
