@@ -23,7 +23,13 @@
 			<div class="inner">
 				<div class="gallery pad fullimage">
 					<div class="gallery-fullimage">
+						<?php if (isImagePhoto()) { ?>
+						<a class="swipebox" title="<?php echo getBareImageTitle(); ?>" href="<?php echo html_encode(getDefaultSizedImage()); ?>">
+						<?php } ?>
 						<?php printDefaultSizedImage(getBareImageTitle(),'scale'); ?>
+						<?php if (isImagePhoto()) { ?>
+						</a>
+						<?php } ?>
 						<?php if (getImageData('copyright')) { ?><p class="image-copy"><i class="fa fa-copyright"></i> <?php echo getImageData('copyright'); ?></p><?php } ?>
 					</div>
 				</div>

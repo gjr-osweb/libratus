@@ -9,7 +9,7 @@ class ThemeOptions {
 		setThemeOption('albums_per_row',3,null,'libratus');
 		setThemeOption('images_per_row',6,null,'libratus');
 		setThemeOption('image_use_side','longest',null,'libratus');
-		setThemeOption('image_size', 800, null, 'libratus');
+		setThemeOptionDefault('image_size', 800, null, 'libratus');
 		setThemeOption('image_use_side', 'longest', null, 'libratus');
 		setThemeOption('thumb_size', 300, null, 'libratus');
 		// set core theme option defaults
