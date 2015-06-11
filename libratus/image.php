@@ -1,5 +1,25 @@
 <?php include ('inc-header.php'); ?>
 
+		<?php if (zp_has_filter('theme_head', 'colorbox::css')) {
+			$colorbox_enabled = true;
+		?>
+			<script type="text/javascript">
+				// <!-- <![CDATA[
+				$(document).ready(function() {
+					$(".fullimage-image").colorbox({
+						maxWidth: "98%",
+						maxHeight: "98%",
+						rel:"grp",
+						slideshow:true,
+						slideshowAuto:false,
+						photo: true,
+						close: '<?php echo gettext("close"); ?>'
+					});
+				});
+				// ]]> -->
+			</script>
+		<?php } ?>
+
 		<div id="page-header" class="wrap" style="background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(<?php echo $bg; ?>);">
 			<div class="inner">
 				<h1><?php printAlbumTitle(); ?></h1>
@@ -7,7 +27,7 @@
 			</div>
 		</div>
 		<a id="view"></a>
-		
+
 		<div class="bar">
 			<div class="inner">
 				<?php echo $quickmenu; ?>
@@ -18,12 +38,46 @@
 				</div>
 			</div>
 		</div>
-	
+
 		<div id="main" class="wrap clearfix">
 			<div class="inner">
 				<div class="gallery pad fullimage">
 					<div class="gallery-fullimage">
+
+						<?php if ($colorbox_enabled) {
+							if (isImagePhoto()) {
+								$fullimage = getFullImageURL();
+							} else {
+								$colorbox_enabled = false;
+							}
+						}
+						?>
+						<?php if ($colorbox_enabled) {
+							echo "<div class='hiddenAllImages' style='display:none'>";
+							for ($i=0;$i<$_zp_current_image->getIndex();++$i) {
+								$img= $_zp_current_album->getImage($i);
+								echo '<a class="fullimage-image" href="' . $img->getFullImage() . '" title="'.$img->getTitle().'"></a>';
+							}
+							echo "</div>";
+						?>
+
+							<a href="<?php echo html_encode(pathurlencode($fullimage)); ?>" title="<?php printBareImageTitle(); ?>" class="fullimage-image">
+						<?php } ?>
+
 						<?php printDefaultSizedImage(getBareImageTitle(),'scale'); ?>
+
+						<?php if ($colorbox_enabled) {
+							echo '</a>';
+
+							echo "<div class='hiddenAllImages' style='display:none'>";
+							for ($i=$_zp_current_image->getIndex()+1;$i<$_zp_current_album->getNumImages();++$i) {
+								$img= $_zp_current_album->getImage($i);
+								echo '<a class="fullimage-image" href="' . $img->getFullImage() . '" title="'.$img->getTitle().'"></a>';
+							}
+							echo "</div>";
+
+						} ?>
+
 						<?php if (getImageData('copyright')) { ?><p class="image-copy"><i class="fa fa-copyright"></i> <?php echo getImageData('copyright'); ?></p><?php } ?>
 					</div>
 				</div>
@@ -35,7 +89,7 @@
 						<?php } else { ?>
 						<span class="button prev-link"><i class="fa fa-caret-left"></i> <?php echo gettext("Prev Image"); ?></span>
 						<?php } ?>
-						
+
 						<?php if (hasNextImage()) { ?>
 						<a class="button next-link" href="<?php echo html_encode(getNextImageURL()).'#view'; ?>" title="<?php echo gettext("Next Image"); ?>"><?php echo gettext("Next Image"); ?> <i class="fa fa-caret-right"></i></a>
 						<?php } else { ?>
@@ -45,7 +99,7 @@
 					<hr />
 					<h5><?php printImageTitle(); ?></h5>
 					<div class="desc"><?php printImageDesc(); ?></div>
-					<?php $singletag = getTags(); $tagstring = implode(', ', $singletag); 
+					<?php $singletag = getTags(); $tagstring = implode(', ', $singletag);
 					if (strlen($tagstring) > 0) { ?>
 					<div class="block"><i class="fa fa-tags fa-fw"></i> <?php printTags('links','','taglist', ', '); ?></div>
 					<?php } ?>
@@ -53,9 +107,9 @@
 					<?php if (getOption('libratus_date_images')) { ?><div><i class="fa fa-calendar fa-fw"></i> <?php printImageDate(); ?></div><?php } ?>
 					<?php if (getOption('libratus_download')) { ?><div><i class="fa fa-download fa-fw"></i> <a href="<?php echo html_encode(getFullImageURL()); ?>" title="<?php echo gettext('Download'); ?>"><?php echo gettext('Download').' ('.getFullWidth().' x '.getFullHeight().')'; ?></a></div><?php } ?>
 					<?php if (function_exists('printSlideShowLink') && (getNumImages() > 1) && isImagePhoto()) { ?><hr /><div class="slideshow-link"><i class="fa fa-play fa-fw"></i> <?php printSlideShowLink(); ?></div><?php } ?>
-					
+
 					<?php if (getOption('libratus_social')) include ('inc-socialshare.php'); ?>
-					
+
 					<?php if ((function_exists('printGoogleMap')) || (function_exists('printOpenStreetMap'))) {
 						if (function_exists('printOpenStreetMap')) {
 							$map = new zpOpenStreetMap();
@@ -68,35 +122,35 @@
 							if (getGeoCoord($_zp_current_image)) {
 								setOption('gmap_width',null,false); // wipe out any px settings for plugin, flex set in css
 								setOption('gmap_height',300,false);
-								printGoogleMap(gettext('Show Google Map'),null,'show'); 
+								printGoogleMap(gettext('Show Google Map'),null,'show');
 							}
 						}
 					} ?>
-						
+
 					<?php printCodeblock(); ?>
-					
+
 					<?php if (getImageMetaData()) { ?><p><?php printImageMetadata('',false,'imagemetadata'); ?></p><?php } ?>
-					
+
 					<?php if (!function_exists('printCommentForm')) { ?>
 					<?php if (function_exists('printRating')) { ?>
 					<div id="rating" class="block"><?php printRating(); ?></div>
-					<?php } 
+					<?php }
 					if (function_exists('printAddToFavorites')) include ('inc-favorites.php');
 					} ?>
-					
-					
+
+
 				</div>
-				
-			</div>	
+
+			</div>
 		</div>
-		
+
 		<?php if (function_exists('printCommentForm')) { ?>
 		<div id="comments-gallery" class="wrap clearfix">
 			<div class="inner">
 				<div class="comments-sidebar pad">
 					<?php if (function_exists('printRating')) { ?>
 					<div id="rating" class="block"><?php printRating(); ?></div>
-					<?php } 
+					<?php }
 					if (function_exists('printAddToFavorites')) include ('inc-favorites.php'); ?>
 				</div>
 				<div class="comments-main pad">
@@ -106,7 +160,7 @@
 		</div>
 		<?php } ?>
 
-		<?php if (function_exists('printRelatedItems')) { 
+		<?php if (function_exists('printRelatedItems')) {
 		$result = getRelatedItems('images',null);
 		$resultcount = count($result);
 		if ($resultcount != 0) { ?>
@@ -114,8 +168,8 @@
 			<div class="inner pad">
 				<div class="bold-header"><?php echo gettext('Related Images'); ?></div>
 				<div class="gallery-thumbs">
-					<?php $count = 0; if (is_numeric(getOption('libratus_related_maxnumber'))) { $number = getOption('libratus_related_maxnumber'); } else { $number = 10; } 
-					foreach ($result as $item) { 
+					<?php $count = 0; if (is_numeric(getOption('libratus_related_maxnumber'))) { $number = getOption('libratus_related_maxnumber'); } else { $number = 10; }
+					foreach ($result as $item) {
 						if ($count == $number) break;
 						$alb = newAlbum($item['album']);
 						$obj = newImage($alb, $item['name']);
@@ -134,10 +188,10 @@
 									<div class="image-cr"><i class="fa fa-comments"></i><span> <?php echo $obj->getCommentCount(); ?></span></div>
 									<?php }
 								} ?>
-								<?php if (function_exists('getRating')) { 
+								<?php if (function_exists('getRating')) {
 									if (getRating($obj)) { ?>
 									<div class="image-cr"><i class="fa fa-star"></i><span> <?php echo getRating($obj); ?></span></div>
-									<?php } 
+									<?php }
 								} ?>
 							</div>
 							<i class="fa fa-angle-up mobile-click-details"></i>
@@ -148,5 +202,5 @@
 		</div>
 		<?php }
 		} ?>
-			
+
 <?php include ('inc-footer.php'); ?>
