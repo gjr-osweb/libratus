@@ -1,0 +1,790 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: libratus-ru\n"
+"POT-Creation-Date: 2015-06-21 11:48+0300\n"
+"PO-Revision-Date: 2015-06-21 12:18+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\\..\\..\\\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: css\n"
+"X-Poedit-SearchPathExcluded-1: images\n"
+"X-Poedit-SearchPathExcluded-2: js\n"
+"X-Poedit-SearchPathExcluded-3: locale\n"
+
+#: 404.php:5
+msgid "404"
+msgstr ""
+
+#: 404.php:14
+msgid "404 Page Not Found"
+msgstr ""
+
+#: 404.php:22
+msgid "404 not found"
+msgstr "404 не найдено"
+
+#: 404.php:23
+msgid "The page you are requesting cannot be found."
+msgstr "Запрашиваемая страница не найдена."
+
+#: album.php:91 index.php:83 news.php:89 search.php:105
+msgid "prev"
+msgstr "предыдущий"
+
+#: album.php:91 index.php:83 news.php:89 search.php:105
+msgid "next"
+msgstr "следующий"
+
+#: album.php:98
+msgid "Prev album"
+msgstr "Предыдущий альбом"
+
+#: album.php:100
+msgid "Prev Album"
+msgstr "Предыдущий Альбом"
+
+#: album.php:104
+msgid "Next album"
+msgstr "Следующий альбом"
+
+#: album.php:106
+msgid "Next Album"
+msgstr "Следующий Альбом"
+
+#: album.php:113 search.php:147
+msgid "albums"
+msgstr "альбомы"
+
+#: album.php:114 search.php:148
+msgid "images"
+msgstr "изображения"
+
+#: album.php:127
+msgid "Album RSS"
+msgstr "RSS альбома"
+
+#: album.php:152 image.php:71
+msgid "Show Google Map"
+msgstr "Показать карту Google"
+
+#: album.php:181
+msgid "Related Albums"
+msgstr "Связанные альбомы"
+
+#: archive-stats.php:5 archive-stats.php:15 archive.php:99 archive.php:109
+msgid "Archive"
+msgstr "Архив"
+
+#: archive-stats.php:53 archive-stats.php:97
+msgid "total votes"
+msgstr "всего голосов"
+
+#: archive-stats.php:69 archive-stats.php:110 archive-stats.php:115
+msgid "Sorry, no statistical page to show..."
+msgstr "Страницы статистики нет, к сожалению"
+
+#: archive-stats.php:121 archive.php:147 index.php:88 search.php:139
+msgid "Search gallery"
+msgstr "Искать в галерее"
+
+#: archive.php:7 inc-archive-stats-menu.php:22
+msgid "Latest Images by ID"
+msgstr "Последние изображения по ID"
+
+#: archive.php:12 inc-archive-stats-menu.php:13 inc-footer.php:72
+msgid "Popular Images"
+msgstr "Популярные изображения"
+
+#: archive.php:17 inc-archive-stats-menu.php:31
+msgid "Latest Images by Date"
+msgstr ""
+
+#: archive.php:22
+msgid "Latest Images by mTime"
+msgstr ""
+
+#: archive.php:27
+msgid "Latest Images by Publish Date"
+msgstr ""
+
+#: archive.php:32 inc-archive-stats-menu.php:58 inc-footer.php:162
+msgid "Most Rated Images"
+msgstr ""
+
+#: archive.php:37 inc-archive-stats-menu.php:67 inc-footer.php:180
+msgid "Top Rated Images"
+msgstr ""
+
+#: archive.php:43 inc-archive-stats-menu.php:85
+msgid "Latest Albums by ID"
+msgstr ""
+
+#: archive.php:48 inc-archive-stats-menu.php:76 inc-footer.php:200
+msgid "Popular Albums"
+msgstr ""
+
+#: archive.php:53 inc-archive-stats-menu.php:94
+msgid "Latest Albums by Date"
+msgstr ""
+
+#: archive.php:58
+msgid "Latest Albums by mTime"
+msgstr ""
+
+#: archive.php:63
+msgid "Latest Albums by Publish Date"
+msgstr ""
+
+#: archive.php:68 inc-archive-stats-menu.php:121 inc-footer.php:272
+msgid "Most Rated Albums"
+msgstr ""
+
+#: archive.php:73 inc-archive-stats-menu.php:130 inc-footer.php:290
+msgid "Top Rated Albums"
+msgstr ""
+
+#: archive.php:78 inc-archive-stats-menu.php:139 inc-footer.php:308
+msgid "Latest Updated Albums"
+msgstr ""
+
+#: archive.php:119
+msgid "Gallery Archive"
+msgstr ""
+
+#: archive.php:129
+msgid "News Archive"
+msgstr ""
+
+#: archive.php:138
+msgid "Tags"
+msgstr ""
+
+#: contact.php:7 contact.php:16
+msgid "Contact Us"
+msgstr ""
+
+#: image.php:34
+msgid "Previous Image"
+msgstr ""
+
+#: image.php:34 image.php:36
+msgid "Prev Image"
+msgstr ""
+
+#: image.php:40 image.php:42
+msgid "Next Image"
+msgstr ""
+
+#: image.php:54
+msgid "Download"
+msgstr ""
+
+#: image.php:115
+msgid "Related Images"
+msgstr ""
+
+#: inc-archive-stats-menu.php:5
+msgid "Image Sets"
+msgstr ""
+
+#: inc-archive-stats-menu.php:6
+msgid "Album Sets"
+msgstr ""
+
+#: inc-archive-stats-menu.php:40
+msgid "Latest Images by Mtime"
+msgstr ""
+
+#: inc-archive-stats-menu.php:49
+msgid "Latest Images by Published Date"
+msgstr ""
+
+#: inc-archive-stats-menu.php:103
+msgid "Latest Albums by Mtime"
+msgstr ""
+
+#: inc-archive-stats-menu.php:112
+msgid "Latest Albums by Published Date"
+msgstr ""
+
+#: inc-favorites.php:4 inc-favorites.php:9
+msgid "Favorites"
+msgstr ""
+
+#: inc-favorites.php:24
+msgid ""
+"To add to a specific favorites list, type it in the input box before "
+"clicking add favorite."
+msgstr ""
+
+#: inc-footer.php:10 password.php:5
+msgid "Login"
+msgstr ""
+
+#: inc-footer.php:15
+msgid "Register"
+msgstr ""
+
+#: inc-footer.php:23
+msgid "RSS News"
+msgstr ""
+
+#: inc-footer.php:25
+msgid "RSS Pages"
+msgstr ""
+
+#: inc-footer.php:27
+msgid "RSS Gallery"
+msgstr ""
+
+#: inc-footer.php:56
+msgid "Latest News"
+msgstr ""
+
+#: inc-footer.php:63
+msgid "Latest Comments"
+msgstr ""
+
+#: inc-footer.php:73 inc-footer.php:91 inc-footer.php:109 inc-footer.php:127
+#: inc-footer.php:145 inc-footer.php:163 inc-footer.php:181 inc-footer.php:201
+#: inc-footer.php:219 inc-footer.php:237 inc-footer.php:255 inc-footer.php:273
+#: inc-footer.php:291 inc-footer.php:309
+msgid "More"
+msgstr ""
+
+#: inc-footer.php:90
+msgid "Latest Images (ID)"
+msgstr ""
+
+#: inc-footer.php:108
+msgid "Latest Images (mTime)"
+msgstr ""
+
+#: inc-footer.php:126
+msgid "Latest Images (Date)"
+msgstr ""
+
+#: inc-footer.php:144
+msgid "Latest Images (Pub. Date)"
+msgstr ""
+
+#: inc-footer.php:218
+msgid "Latest Albums (ID)"
+msgstr ""
+
+#: inc-footer.php:236
+msgid "Latest Albums (mTime)"
+msgstr ""
+
+#: inc-footer.php:254
+msgid "Latest Albums (Date)"
+msgstr ""
+
+#: inc-footer.php:341
+msgid "Facebook"
+msgstr ""
+
+#: inc-footer.php:342
+msgid "Twitter"
+msgstr ""
+
+#: inc-footer.php:343
+msgid "Google+"
+msgstr ""
+
+#: inc-header.php:10
+msgid "New Image"
+msgstr ""
+
+#: inc-header.php:11
+msgid "Geotagged"
+msgstr ""
+
+#: inc-header.php:12
+msgid "Protected"
+msgstr ""
+
+#: inc-header.php:13
+msgid "Unpublished"
+msgstr ""
+
+#: inc-header.php:17 inc-header.php:114
+msgid "Archive/Search"
+msgstr ""
+
+#: inc-header.php:18
+msgid "Scroll to top"
+msgstr ""
+
+#: inc-header.php:98
+msgid "Home"
+msgstr ""
+
+#: inc-header.php:101 inc-header.php:121
+msgid "Gallery"
+msgstr ""
+
+#: inc-header.php:108 news.php:15 themeoptions.php:71
+msgid "News"
+msgstr ""
+
+#: inc-header.php:118
+msgid "Contact"
+msgstr ""
+
+#: inc-socialshare.php:17
+msgid "Share: "
+msgstr ""
+
+#: inc-socialshare.php:18
+msgid "Share on Facebook"
+msgstr ""
+
+#: inc-socialshare.php:19
+msgid "Share on Twitter"
+msgstr ""
+
+#: inc-socialshare.php:20
+msgid "Share on Google+"
+msgstr ""
+
+#: news.php:40 news.php:74
+msgid "Comments:"
+msgstr ""
+
+#: news.php:98 news.php:100
+msgid "Prev Article"
+msgstr ""
+
+#: news.php:104 news.php:106
+msgid "Next Article"
+msgstr ""
+
+#: news.php:123 news.php:128
+msgid "News Categories"
+msgstr ""
+
+#: news.php:124 news.php:129
+msgid "All News"
+msgstr ""
+
+#: pages.php:28
+msgid "Tags: "
+msgstr ""
+
+#: pages.php:47
+msgid "Last Updated: "
+msgstr ""
+
+#: password.php:14
+msgid "Password required"
+msgstr ""
+
+#: password.php:26
+msgid "Register for this site"
+msgstr ""
+
+#: password.php:29
+msgid "You are logged in"
+msgstr ""
+
+#: password.php:30
+msgid "Goto Homepage"
+msgstr ""
+
+#: register.php:6 register.php:15
+msgid "User Registration"
+msgstr ""
+
+#: search.php:22 search.php:31
+msgid "Search"
+msgstr ""
+
+#: search.php:50
+msgid "Sorry, no matches found. Try refining your search."
+msgstr ""
+
+#: search.php:115
+msgid "Page Result"
+msgstr ""
+
+#: search.php:126
+msgid "News Result"
+msgstr ""
+
+#: search.php:144
+#, php-format
+msgid "%1$u Hit for <em>%2$s</em>"
+msgid_plural "%1$u Hits for <em>%2$s</em>"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: search.php:149
+msgid "news"
+msgstr ""
+
+#: search.php:150
+msgid "pages"
+msgstr ""
+
+#: slideshow.php:12
+msgid "Slideshow"
+msgstr ""
+
+#: themeoptions.php:69
+msgid "Albums"
+msgstr ""
+
+#: themeoptions.php:70
+msgid "Images"
+msgstr ""
+
+#: themeoptions.php:72
+msgid "Pages"
+msgstr ""
+
+#: themeoptions.php:75 themeoptions.php:95
+msgid "Images - Popular"
+msgstr ""
+
+#: themeoptions.php:76 themeoptions.php:96
+msgid "Images - Latest by ID"
+msgstr ""
+
+#: themeoptions.php:77 themeoptions.php:97
+msgid "Images - Latest by Date"
+msgstr ""
+
+#: themeoptions.php:78 themeoptions.php:98
+msgid "Images - Latest by mtime"
+msgstr ""
+
+#: themeoptions.php:79 themeoptions.php:99
+msgid "Images - Latest by Publish Date"
+msgstr ""
+
+#: themeoptions.php:80 themeoptions.php:100
+msgid "Images - Most Rated"
+msgstr ""
+
+#: themeoptions.php:81 themeoptions.php:101
+msgid "Images - Top Rated"
+msgstr ""
+
+#: themeoptions.php:82 themeoptions.php:102
+msgid "Albums - Popular"
+msgstr ""
+
+#: themeoptions.php:83 themeoptions.php:103
+msgid "Albums - Latest by ID"
+msgstr ""
+
+#: themeoptions.php:84 themeoptions.php:104
+msgid "Albums - Latest by Date"
+msgstr ""
+
+#: themeoptions.php:85 themeoptions.php:105
+msgid "Albums - Latest by mtime"
+msgstr ""
+
+#: themeoptions.php:86 themeoptions.php:106
+msgid "Albums - Latest by Publish Date"
+msgstr ""
+
+#: themeoptions.php:87 themeoptions.php:107
+msgid "Albums - Most Rated"
+msgstr ""
+
+#: themeoptions.php:88 themeoptions.php:108
+msgid "Albums - Top Rated"
+msgstr ""
+
+#: themeoptions.php:89 themeoptions.php:109
+msgid "Albums - Latest Updated"
+msgstr ""
+
+#: themeoptions.php:92
+msgid "Gallery - Description"
+msgstr ""
+
+#: themeoptions.php:93
+msgid "News - Latest"
+msgstr ""
+
+#: themeoptions.php:94
+msgid "Comments - Latest"
+msgstr ""
+
+#: themeoptions.php:120
+msgid "Max Width of Site"
+msgstr ""
+
+#: themeoptions.php:123
+msgid ""
+"Set the max-width of site in pixels.  Site is fluid but will not expand "
+"beyond this width."
+msgstr ""
+
+#: themeoptions.php:124
+msgid "Home Slideshow Type"
+msgstr ""
+
+#: themeoptions.php:127
+msgid "Random"
+msgstr ""
+
+#: themeoptions.php:128
+msgid "Popular"
+msgstr ""
+
+#: themeoptions.php:129
+msgid "Latest by ID"
+msgstr ""
+
+#: themeoptions.php:130
+msgid "Latest by Date"
+msgstr ""
+
+#: themeoptions.php:131
+msgid "Latest by mtime"
+msgstr ""
+
+#: themeoptions.php:132
+msgid "Latest by Publish Date"
+msgstr ""
+
+#: themeoptions.php:133
+msgid "Most Rated"
+msgstr ""
+
+#: themeoptions.php:134
+msgid "Top Rated"
+msgstr ""
+
+#: themeoptions.php:135
+msgid "Select what image statistic to show on the frontpage slideshow."
+msgstr ""
+
+#: themeoptions.php:136
+msgid "Home Slideshow from Album"
+msgstr ""
+
+#: themeoptions.php:139
+msgid ""
+"Optionally select a specific album the Home Slideshow pulls from. Default is "
+"\"Entire Gallery\", which pulls from the entire gallery. Be careful with "
+"this option to ensure there are images that meet the statistic and they are "
+"viewable (rights), otherwise no images will show."
+msgstr ""
+
+#: themeoptions.php:140
+msgid "Slideshow Interval"
+msgstr ""
+
+#: themeoptions.php:143
+msgid "In milliseconds (default 5000)."
+msgstr ""
+
+#: themeoptions.php:144
+msgid "Home Page Full-width"
+msgstr ""
+
+#: themeoptions.php:146
+msgid ""
+"Check for album thumbs to full-width on home page (no sidebar statistics "
+"menu with search)."
+msgstr ""
+
+#: themeoptions.php:147
+msgid "Show Date"
+msgstr ""
+
+#: themeoptions.php:150
+msgid ""
+"Toggle whether to display dates in albums, images, news, and pages. On "
+"\"pages\", libratus shows last updated date if checked. Note that you need "
+"to show dates on images, or on news, for those to show on the archive page."
+msgstr ""
+
+#: themeoptions.php:151
+msgid "Download Button"
+msgstr ""
+
+#: themeoptions.php:153
+msgid ""
+"Check to enable users the ability to download original image from image "
+"details page. If you want a save dialog, you will need to set the "
+"appropriate option in options->image as well (protected, download)."
+msgstr ""
+
+#: themeoptions.php:154
+msgid "Simple Social Sharing?"
+msgstr ""
+
+#: themeoptions.php:156
+msgid ""
+"Check to display simple links (lightweight) for users to share to their "
+"Facebook, Google, and Twitter accounts. Make sure to enable the meta tags "
+"plugin and enable the og entries for these sites to pull the correct thumbs, "
+"titles, and descriptions upon share."
+msgstr ""
+
+#: themeoptions.php:157
+msgid "Custom CSS"
+msgstr ""
+
+#: themeoptions.php:160
+msgid ""
+"Enter any custom CSS, safely carries over upon theme upgrade. Will be placed "
+"between style tags in the head."
+msgstr ""
+
+#: themeoptions.php:161
+msgid "Google Tracking Code"
+msgstr ""
+
+#: themeoptions.php:164
+msgid ""
+"Enter your Google Analytics Universal Tracking Id here to auto insert the "
+"tracking code on every page (UA-...). Leave blank to omit. Note that the "
+"analytics code will not be outputted for admin users, so that administrator "
+"page visits will not be counted."
+msgstr ""
+
+#: themeoptions.php:165
+msgid "Tracking Type"
+msgstr ""
+
+#: themeoptions.php:167
+msgid "Universal"
+msgstr ""
+
+#: themeoptions.php:167
+msgid "Classic"
+msgstr ""
+
+#: themeoptions.php:168
+msgid ""
+"Select what type of analytics you are using. See your Google analytics "
+"account for explanations."
+msgstr ""
+
+#: themeoptions.php:169
+msgid "Facebook Link"
+msgstr ""
+
+#: themeoptions.php:172
+msgid "Enter your full Facebook page link (http://....). Leave blank to omit."
+msgstr ""
+
+#: themeoptions.php:173
+msgid "Twitter Link"
+msgstr ""
+
+#: themeoptions.php:176
+msgid "Enter your full Twitter page link (http://....). Leave blank to omit."
+msgstr ""
+
+#: themeoptions.php:177
+msgid "Google+ Link"
+msgstr ""
+
+#: themeoptions.php:180
+msgid "Enter your full Google+ page link (http://....). Leave blank to omit."
+msgstr ""
+
+#: themeoptions.php:181
+msgid "Copyright Text"
+msgstr ""
+
+#: themeoptions.php:184
+msgid "Edit text for footer copyright. Leave blank to omit."
+msgstr ""
+
+#: themeoptions.php:185
+msgid "Statistical Pages on Archive"
+msgstr ""
+
+#: themeoptions.php:188
+msgid ""
+"Select which statistical pages to show in the archive side menu and homepage "
+"side menu (optional), if any."
+msgstr ""
+
+#: themeoptions.php:189
+msgid "Statistical Pages Number"
+msgstr ""
+
+#: themeoptions.php:192
+msgid ""
+"Enter the number of images or albums to show for each statistic on the "
+"archive pages (default 30)."
+msgstr ""
+
+#: themeoptions.php:193
+msgid "Bottom Stats Items per Row"
+msgstr ""
+
+#: themeoptions.php:195
+msgid "Disable"
+msgstr ""
+
+#: themeoptions.php:195
+msgid "1"
+msgstr ""
+
+#: themeoptions.php:195
+msgid "2"
+msgstr ""
+
+#: themeoptions.php:195
+msgid "3"
+msgstr ""
+
+#: themeoptions.php:195
+msgid "4"
+msgstr ""
+
+#: themeoptions.php:196
+msgid "Select how many items per row for the bottom stats, if any."
+msgstr ""
+
+#: themeoptions.php:197
+msgid "Bottom Stats"
+msgstr ""
+
+#: themeoptions.php:200
+msgid ""
+"Select what to show in the bottom row, if not disabled above. Recommended to "
+"choose multiples of the option items per row."
+msgstr ""
+
+#: themeoptions.php:201
+msgid "Number of Images in Bottom Stats"
+msgstr ""
+
+#: themeoptions.php:204
+msgid ""
+"Enter the number of images or albums to show for each selected statistic in "
+"the bottom footer."
+msgstr ""
+
+#: themeoptions.php:205
+msgid "Related Max Number"
+msgstr ""
+
+#: themeoptions.php:208
+msgid ""
+"Enter the MAX number of related albums and images to show on their "
+"respective pages (if plugin is enabled)."
+msgstr ""
